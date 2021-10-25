@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public int countDownStartValue = 30;
+    public int countDownStartValue = 4;
 
     public Text timerText;
     bool FirstTimer;
@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
 
     public Button buttonTimer;
     public Button buttonNext;
+    public Button PlayerOneButton;
+    public Button PlayerTwoButton;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,9 @@ public class Timer : MonoBehaviour
         SecondTimer = false;
         ThirdTimer = false;
         FourthTimer = false;
+        buttonNext.interactable = false;
+        PlayerOneButton.interactable = false;
+        PlayerTwoButton.interactable = false;
     }
 
     public void countDownTimer()
@@ -30,7 +35,6 @@ public class Timer : MonoBehaviour
         if(countDownStartValue > 0)
         {
             buttonTimer.interactable = false;
-            buttonNext.interactable = false;
             timerText.text = "" + countDownStartValue;
             countDownStartValue--;
             Invoke("countDownTimer", 1.0f);
@@ -41,7 +45,7 @@ public class Timer : MonoBehaviour
             timerText.text = "";
             if(FirstTimer && !SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 30;
+                countDownStartValue = 4;
                 FirstTimer = false;
                 SecondTimer = true;
                 ThirdTimer = false;
@@ -49,7 +53,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 15;
+                countDownStartValue = 2;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = true;
@@ -57,7 +61,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 15;
+                countDownStartValue = 2;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = false;
@@ -65,15 +69,23 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && !ThirdTimer && FourthTimer)
             {
-                countDownStartValue = 30;
+                countDownStartValue = 4;
                 FirstTimer = true;
                 SecondTimer = false;
                 ThirdTimer = false;
                 FourthTimer = false;
-                buttonNext.interactable = true; 
+                PlayerOneButton.interactable = true;
+                PlayerTwoButton.interactable = true;
+                buttonTimer.interactable = false;
             }
 
         }
+    }
+
+    public void DisableButton()
+    {
+        buttonNext.interactable = false;
+        buttonTimer.interactable = true;
     }
     // Update is called once per frame
     void Update()
