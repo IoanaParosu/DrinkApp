@@ -1,16 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Results : MonoBehaviour
 {
-    List<Text> players = new List<Text>()
-    {
-
-    };
-
+    [HideInInspector] public Text[] players;
     public Text[] playersOrdered;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +24,8 @@ public class Results : MonoBehaviour
         for(int i = 0; i < PlayerPrefs.GetInt("NumOfPlayers"); i++)
         {
             //players[i].text = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) + " " + ChoosePlayers.scores[i];
-            players[i].text = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) + " " + ChoosePlayers.scores[i] + "p";
+            playersOrdered[i].text = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) + " " + ChoosePlayers.scores[i] + "p";
+            playersOrdered[i].gameObject.SetActive(true);
         }
     }
 
