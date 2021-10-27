@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-  public void SetPlayersScene()
+  public static void SetPlayersScene()
     {
         SceneManager.LoadScene("SetPlayersScene");
     }
 
-    public void PlayScene()
+    public static void PlayScene()
     {
         SceneManager.LoadScene("PlayScene");
+    }
+    public static void ResultsScene()
+    {
+        SceneManager.LoadScene("ResultScene");
     }
 }

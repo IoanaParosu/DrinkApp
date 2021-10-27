@@ -6,7 +6,12 @@ public class SetQuestion : MonoBehaviour
 {
     public GameObject[] questions;
 
-    List<int> usedRands = new List<int>()
+    [HideInInspector] public static List<int> usedRands = new List<int>()
+    {
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ,28, 29
+    };
+
+    [HideInInspector] public static List<int> constRands = new List<int>()
     {
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ,28, 29
     };
