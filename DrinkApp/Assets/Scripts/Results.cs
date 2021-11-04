@@ -5,28 +5,84 @@ using UnityEngine.UI;
 
 public class Results : MonoBehaviour
 {
-    [HideInInspector] public Text[] players;
-    public Text[] playersOrdered;
+    public Transform entryContainer;
+    public Transform entryTemplate;
+    private List<HighScoreEntry> highScoreEntryList;
+    private List<Transform> highScoreEntryTransformList;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        ShowResults();
-    }
+        //entryContainer = transform.Find("highScoreContainer");
+        //entryTemplate = entryContainer.Find("highScoreTemplate");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        //entryTemplate.gameObject.SetActive(false);
 
-    public void ShowResults()
-    {
+        highScoreEntryList = new List<HighScoreEntry>()
+        {
+            
+        };
+
         for(int i = 0; i < PlayerPrefs.GetInt("NumOfPlayers"); i++)
         {
-            //players[i].text = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) + " " + ChoosePlayers.scores[i];
-            playersOrdered[i].text = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) + " " + ChoosePlayers.scores[i] + "p";
-            playersOrdered[i].gameObject.SetActive(true);
+            highScoreEntryList.Add(new HighScoreEntry { score = ChoosePlayers.scores[i], name = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) });
         }
+
+        for(int i = 0; i < highScoreEntryList.Count; i++)
+        {
+            for(int j = i + 1; j < highScoreEntryList.Count; j++)
+            {
+                if(highScoreEntryList[j].score > highScoreEntryList[i].score)
+                {
+                    HighScoreEntry temp = highScoreEntryList[i];
+                    highScoreEntryList[i] = highScoreEntryList[j];
+                    highScoreEntryList[j] = temp;
+                }
+            }
+        }
+
+        highScoreEntryTransformList = new List<Transform>();
+        foreach(HighScoreEntry highScoreEntry in highScoreEntryList)
+        {
+            createHighScoreEntryTransform(highScoreEntry, entryContainer, highScoreEntryTransformList);
+        }
+    }
+
+    private void createHighScoreEntryTransform(HighScoreEntry highScoreEntry, Transform container, List<Transform> transformList)
+    {
+        float templateHeight = 20f;
+        Transform entryTransform = Instantiate(entryTemplate, container);
+        RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
+        entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
+
+        int rank = transformList.Count + 1;
+        string rankString;
+        switch(rank)
+        {
+            default: rankString = rank + "TH";
+                break;
+
+            case 1: rankString = "1ST"; break;
+            case 2: rankString = "2ND"; break;
+            case 3: rankString = "3RD"; break;
+        }
+
+        entryTransform.Find("posText").GetComponent<Text>().text = rankString;
+
+        int score = highScoreEntry.score;
+
+        entryTransform.Find("scoreText").GetComponent<Text>().text = score.ToString();
+
+        string name = highScoreEntry.name;
+
+        entryTransform.Find("nameText").GetComponent<Text>().text = name;
+
+        transformList.Add(entryTransform);
+    }
+
+    private class HighScoreEntry
+    {
+        public int score;
+        public string name;
     }
 
     public void PlayAgain()
@@ -40,6 +96,11 @@ public class Results : MonoBehaviour
     {
         ResetValues();
         ChangeScene.SetPlayersScene();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void ResetValues()
@@ -63,5 +124,11 @@ public class Results : MonoBehaviour
         {
             SetQuestion.usedRands = SetQuestion.constRands;
         }
+    }
+
+    private class highScore
+    {
+        public int score;
+        public string name;
     }
 }
