@@ -8,9 +8,20 @@ public class AudioManager : MonoBehaviour
     public AudioSource audio;
     public AudioClip clip;
 
+    public static AudioManager instance;
+
     // Start is called before the first frame update
     void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+        { 
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -24,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-
+        Play("Theme");
     }
 
     public void Play(string name)
