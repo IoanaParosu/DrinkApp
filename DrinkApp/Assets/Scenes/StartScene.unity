@@ -676,7 +676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1938701749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,6 +695,20 @@ MonoBehaviour:
     volume: 0.165
     pitch: 1
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Clock
+    clip: {fileID: 8300000, guid: 413e8fe5dfca9204d8413a74cd3bb210, type: 3}
+    volume: 0.165
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Bell
+    clip: {fileID: 8300000, guid: 7cda09b98cdfe2349891eeabb4bd071a, type: 3}
+    volume: 0.165
+    pitch: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   audio: {fileID: 0}
