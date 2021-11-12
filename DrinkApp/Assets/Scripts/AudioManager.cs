@@ -43,7 +43,11 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
             return;
-        s.source.Play();
+
+        if (!s.source.isPlaying)
+        {
+            s.source.Play();
+        }
     }
 
     public void Stop(string name)
@@ -72,6 +76,27 @@ public class AudioManager : MonoBehaviour
         audio.Stop();
         audio.clip = music;
         audio.Play();
+    }
+
+    public void SetVolume(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+
+        if (!Timer.ChangeVolume)
+        {
+            s.source.volume = s.source.volume / 2;
+        }
+    }
+
+    public void SetVolumeDef(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+
+        s.source.volume = 0.165f;
     }
 
 }

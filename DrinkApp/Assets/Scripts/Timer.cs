@@ -18,6 +18,8 @@ public class Timer : MonoBehaviour
     public Button PlayerOneButton;
     public Button PlayerTwoButton;
 
+    public static bool ChangeVolume = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,9 @@ public class Timer : MonoBehaviour
     {
         if(countDownStartValue > 0)
         {
+            AudioManager.instance.Play("Clock");
+            AudioManager.instance.SetVolume("Theme");
+            ChangeVolume = true;
             buttonTimer.interactable = false;
             timerText.text = "" + countDownStartValue;
             countDownStartValue--;
@@ -41,11 +46,13 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.Stop("Clock");
+            AudioManager.instance.Play("Bell");
             buttonTimer.interactable = true;
             timerText.text = "";
             if(FirstTimer && !SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 45;
                 FirstTimer = false;
                 SecondTimer = true;
                 ThirdTimer = false;
@@ -53,7 +60,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 30;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = true;
@@ -61,7 +68,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 30;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = false;
@@ -69,7 +76,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && !ThirdTimer && FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 45;
                 FirstTimer = true;
                 SecondTimer = false;
                 ThirdTimer = false;

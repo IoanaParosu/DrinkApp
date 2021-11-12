@@ -124,6 +124,8 @@ public class Results : MonoBehaviour
         {
             SetQuestion.usedRands = SetQuestion.constRands;
         }
+
+        AudioManager.instance.SetVolumeDef("Theme");
     }
 
     private class highScore
