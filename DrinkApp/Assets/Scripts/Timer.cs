@@ -52,7 +52,7 @@ public class Timer : MonoBehaviour
             timerText.text = "";
             if(FirstTimer && !SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 45;
+                countDownStartValue = 1;
                 FirstTimer = false;
                 SecondTimer = true;
                 ThirdTimer = false;
@@ -60,7 +60,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 30;
+                countDownStartValue = 1;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = true;
@@ -68,7 +68,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 30;
+                countDownStartValue = 1;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = false;
@@ -76,7 +76,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && !ThirdTimer && FourthTimer)
             {
-                countDownStartValue = 45;
+                countDownStartValue = 1;
                 FirstTimer = true;
                 SecondTimer = false;
                 ThirdTimer = false;

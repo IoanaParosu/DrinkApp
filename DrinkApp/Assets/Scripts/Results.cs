@@ -24,7 +24,7 @@ public class Results : MonoBehaviour
 
         for(int i = 0; i < PlayerPrefs.GetInt("NumOfPlayers"); i++)
         {
-            highScoreEntryList.Add(new HighScoreEntry { score = ChoosePlayers.scores[i], name = PlayerPrefs.GetString(ChoosePlayers.constNames[i]) });
+            highScoreEntryList.Add(new HighScoreEntry { score = ChoosePlayers.scores[i], name = PlayerPrefs.GetString(ChoosePlayers.constNames[i])});
         }
 
         for(int i = 0; i < highScoreEntryList.Count; i++)

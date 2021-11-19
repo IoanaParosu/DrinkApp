@@ -5522,7 +5522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb4e3cb44c9b2243bff6e255f82b53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownStartValue: 45
+  countDownStartValue: 1
   timerText: {fileID: 2071147470}
   buttonTimer: {fileID: 1367807376}
   buttonNext: {fileID: 9903987}

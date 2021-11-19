@@ -40,7 +40,12 @@ public class PlayerNameScript : MonoBehaviour
     public Text inputText8;
     public Text loadedName8;
 
+    public GameObject avatarWindow;
 
+    public Image[] test;
+    public AvatarDatabase avatarTest;
+
+    string[] count = { "player1", "player2", "player3", "player4" };
 
     // Start is called before the first frame update
     void Start()
@@ -88,5 +93,58 @@ public class PlayerNameScript : MonoBehaviour
         saveName8 = inputText8.text;
         PlayerPrefs.SetString("name8", saveName8);
 
+    }
+
+    public void openWindow()
+    {
+        avatarWindow.SetActive(true);
+    }
+
+    public void closeWindow()
+    {
+        avatarWindow.SetActive(false);
+    }
+
+    public void Button1()
+    {
+        AvatarManager.key = "player1";
+    }
+    public void Button2()
+    {
+        AvatarManager.key = "player2";
+    }
+    public void Button3()
+    {
+        AvatarManager.key = "player3";
+    }
+    public void Button4()
+    {
+        AvatarManager.key = "player4";
+    }
+    public void Button5()
+    {
+        AvatarManager.key = "player5";
+    }
+    public void Button6()
+    {
+        AvatarManager.key = "player6";
+    }
+    public void Button7()
+    {
+        AvatarManager.key = "player7";
+    }
+    public void Button8()
+    {
+        AvatarManager.key = "player8";
+    }
+
+    public void TEST()
+    {
+        for (int i = 0; i < PlayerPrefs.GetInt("NumOfPlayers"); i++)
+        {
+            Avatar avatar = avatarTest.GetAvatar(PlayerPrefs.GetInt(count[i]));
+            test[i].sprite = avatar.playerAvatar;
+            test[i].enabled = true;
+        }
     }
 }
