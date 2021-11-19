@@ -42,10 +42,10 @@ public class PlayerNameScript : MonoBehaviour
 
     public GameObject avatarWindow;
 
-    public Image[] test;
-    public AvatarDatabase avatarTest;
+    //public Image[] test;
+    //public AvatarDatabase avatarTest;
 
-    string[] count = { "player1", "player2", "player3", "player4" };
+    //string[] count = { "player1", "player2", "player3", "player4" };
 
     // Start is called before the first frame update
     void Start()
@@ -138,13 +138,13 @@ public class PlayerNameScript : MonoBehaviour
         AvatarManager.key = "player8";
     }
 
-    public void TEST()
-    {
-        for (int i = 0; i < PlayerPrefs.GetInt("NumOfPlayers"); i++)
-        {
-            Avatar avatar = avatarTest.GetAvatar(PlayerPrefs.GetInt(count[i]));
-            test[i].sprite = avatar.playerAvatar;
-            test[i].enabled = true;
-        }
-    }
+    //public void TEST()
+    //{
+    //    for (int i = 0; i < PlayerPrefs.GetInt("NumOfPlayers"); i++)
+    //    {
+    //        Avatar avatar = avatarTest.GetAvatar(PlayerPrefs.GetInt(count[i]));
+    //        test[i].sprite = avatar.playerAvatar;
+    //        test[i].enabled = true;
+    //    }
+    //}
 }
