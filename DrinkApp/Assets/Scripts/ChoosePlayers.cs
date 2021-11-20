@@ -19,6 +19,13 @@ public class ChoosePlayers : MonoBehaviour
     public Button PlayerButtonOne;
     public Button PlayerButtonTwo;
     public Button buttonNext;
+    public Image[] avatarImage;
+    public AvatarDatabase avatarDB;
+
+    List <string> holder = new List<string>() 
+    { 
+        "player1", "player2", "player3", "player4", "player5", "player6", "player7", "player8" 
+    };
 
     public static List<string> usedNames = new List<string>()
     {
@@ -52,6 +59,7 @@ public class ChoosePlayers : MonoBehaviour
 
     public void ChoosingPlayers()
     {
+
         if (names.Count < 1 && usedNames.Count < 1)
         {
             ChangeScene.ResultsScene();
@@ -83,6 +91,8 @@ public class ChoosePlayers : MonoBehaviour
                 usedNames.RemoveAt(random2);
             }
         }
+
+        Test();
     }
 
     public void Vote1()
@@ -125,5 +135,90 @@ public class ChoosePlayers : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void Test()
+    {
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name1"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player1"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name1"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player1"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name2"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player2"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name2"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player2"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name3"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player3"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name3"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player3"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name4"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player4"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name4"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player4"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name5"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player5"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name5"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player5"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name6"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player6"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name6"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player6"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name7"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player7"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name7"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player7"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer1Text.text == PlayerPrefs.GetString("name8"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player8"));
+            avatarImage[0].sprite = avatar.playerAvatar;
+        }
+        if (loadPlayer2Text.text == PlayerPrefs.GetString("name8"))
+        {
+            Avatar avatar = avatarDB.GetAvatar(PlayerPrefs.GetInt("player8"));
+            avatarImage[1].sprite = avatar.playerAvatar;
+        }
     }
 }

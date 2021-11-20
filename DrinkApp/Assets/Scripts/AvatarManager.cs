@@ -14,6 +14,10 @@ public class AvatarManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("player1", 0);
+        PlayerPrefs.SetInt("player2", 0);
+        PlayerPrefs.SetInt("player3", 0);
+        PlayerPrefs.SetInt("player4", 0);
         UpdateAvatar(selectedOption);
     }
 

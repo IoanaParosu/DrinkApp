@@ -49,13 +49,13 @@ public class SetQuestion : MonoBehaviour
         {
             if(questions[i].activeInHierarchy)
             {
-                if(i >= 13 && i <= 24)
+                if(i >= 12 && i <= 23)
                 {
                     For.SetActive(true);
                     Against.SetActive(true);
                 }
 
-                else if(i >= 37)
+                else if(i >= 36)
                 {
                     For.SetActive(true);
                     Against.SetActive(true);
