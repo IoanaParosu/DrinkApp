@@ -22,9 +22,9 @@ public class ChoosePlayers : MonoBehaviour
     public Image[] avatarImage;
     public AvatarDatabase avatarDB;
 
-    List <string> holder = new List<string>() 
-    { 
-        "player1", "player2", "player3", "player4", "player5", "player6", "player7", "player8" 
+    List<string> matchUps = new List<string>()
+    {
+
     };
 
     public static List<string> usedNames = new List<string>()
@@ -77,6 +77,7 @@ public class ChoosePlayers : MonoBehaviour
                 ChosenPlayer2 = names[random2];
                 loadPlayer2Text.text = PlayerPrefs.GetString(ChosenPlayer2);
                 names.RemoveAt(random2);
+                matchUps.Add(ChosenPlayer1+ChosenPlayer2);
             }
             else
             {
@@ -86,6 +87,24 @@ public class ChoosePlayers : MonoBehaviour
                 loadPlayer1Text.text = PlayerPrefs.GetString(ChosenPlayer1);
                 usedNames.RemoveAt(random1);
                 random2 = Random.Range(0, usedNames.Count - 1);
+
+                for(int i = 0; i < matchUps.Count; i++)
+                {
+                    if (ChosenPlayer1 + usedNames[random2] == matchUps[i] || usedNames[random2] + ChosenPlayer1 == matchUps[i])
+                    {
+                        Debug.Log("Start Reroll");
+                        if(random2 >= usedNames.Count - 1)
+                        {
+                            random2 = random2 - 1;
+                        }
+
+                        else
+                        {
+                            random2 = random2 + 1;
+                        }
+                    }
+                }
+
                 ChosenPlayer2 = usedNames[random2];
                 loadPlayer2Text.text = PlayerPrefs.GetString(ChosenPlayer2);
                 usedNames.RemoveAt(random2);
