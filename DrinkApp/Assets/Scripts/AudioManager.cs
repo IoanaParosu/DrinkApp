@@ -90,6 +90,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void SetVolume(string name, float value)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+
+        s.source.volume = value;
+    }
+
     public void SetVolumeDef(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);

@@ -20,6 +20,12 @@ public class Timer : MonoBehaviour
 
     public static bool ChangeVolume = false;
 
+    float time = 1f;
+    public bool paused = false;
+
+    public GameObject pauseButton;
+    public GameObject resumeButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +47,11 @@ public class Timer : MonoBehaviour
             ChangeVolume = true;
             buttonTimer.interactable = false;
             timerText.text = "" + countDownStartValue;
-            countDownStartValue--;
-            Invoke("countDownTimer", 1.0f);
+            if(!paused)
+            {
+                countDownStartValue--;
+            }
+            Invoke("countDownTimer", time);
         }
         else
         {
@@ -50,6 +59,7 @@ public class Timer : MonoBehaviour
             AudioManager.instance.Play("Bell");
             buttonTimer.interactable = true;
             timerText.text = "";
+            time = 1.0f;
             if(FirstTimer && !SecondTimer && !ThirdTimer && !FourthTimer)
             {
                 countDownStartValue = 1;
@@ -87,6 +97,28 @@ public class Timer : MonoBehaviour
             }
 
         }
+    }
+
+    public void SkipTimer()
+    {
+        time = 0.1f;
+        AudioManager.instance.Stop("Clock");
+    }
+
+    public void PauseTimer()
+    {
+        paused = true;
+        AudioManager.instance.SetVolume("Clock", 0);
+        pauseButton.SetActive(false);
+        resumeButton.SetActive(true);
+    }
+
+    public void ResumeTimer()
+    {
+        paused = false;
+        AudioManager.instance.SetVolume("Clock", 0.165f);
+        resumeButton.SetActive(false);
+        pauseButton.SetActive(true);
     }
 
     public void DisableButton()
