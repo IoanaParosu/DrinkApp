@@ -9,6 +9,7 @@ public class Questions : MonoBehaviour
     public string[] TypeOneQuestions = new string[24];
     public string[] TypeTwoQuestions = new string[24];
     public string[] TypeThreeQuestions = new string[24];
+    public string[] TypeFourQuestions = new string[24];
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,15 @@ public class Questions : MonoBehaviour
             questionsText[i] = TypeThreeQuestions[i];
         }
     }
+
+    public void TopicFour()
+    {
+        for (int i = 0; i < TypeFourQuestions.Length; i++)
+        {
+            questionsText[i] = TypeFourQuestions[i];
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
