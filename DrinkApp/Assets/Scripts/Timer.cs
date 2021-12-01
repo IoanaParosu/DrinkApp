@@ -62,7 +62,7 @@ public class Timer : MonoBehaviour
             time = 1.0f;
             if(FirstTimer && !SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 40;
                 FirstTimer = false;
                 SecondTimer = true;
                 ThirdTimer = false;
@@ -70,7 +70,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && SecondTimer && !ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 20;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = true;
@@ -78,7 +78,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && ThirdTimer && !FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 20;
                 FirstTimer = false;
                 SecondTimer = false;
                 ThirdTimer = false;
@@ -86,7 +86,7 @@ public class Timer : MonoBehaviour
             }
             else if(!FirstTimer && !SecondTimer && !ThirdTimer && FourthTimer)
             {
-                countDownStartValue = 1;
+                countDownStartValue = 40;
                 FirstTimer = true;
                 SecondTimer = false;
                 ThirdTimer = false;
