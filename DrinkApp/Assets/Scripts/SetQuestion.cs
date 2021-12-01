@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetQuestion : MonoBehaviour
 {
-    public GameObject[] questions;
+    public Text[] questions;
 
     [HideInInspector] public static List<int> usedRands = new List<int>()
     {
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ,28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
     };
 
     [HideInInspector] public static List<int> constRands = new List<int>()
     {
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ,28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
     };
 
     public GameObject For;
@@ -24,38 +25,38 @@ public class SetQuestion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        setQuestionsText();
         ChooseQuestion();
     }
 
     public void ChooseQuestion()
     {
-        questions[temp].SetActive(false);
+        for(int i = 0; i < questions.Length; i++)
+        {
+            Debug.Log(questions[i].text);
+        }
+        questions[temp].gameObject.SetActive(false);
         random = Random.Range(0, usedRands.Count - 1);
-        //Debug.Log(random);
-        questions[usedRands[random]].SetActive(true);
+        questions[usedRands[random]].gameObject.SetActive(true);
         temp = usedRands[random];
         usedRands.RemoveAt(random);
-        //Debug.Log(usedRands.Count);
+    }
 
-        //for (int i = 0; i < usedRands.Count; i++)
-        //{
-        //    Debug.Log(usedRands[i]);
-        //}
+    public void setQuestionsText()
+    {
+        for(int i = 0; i < questions.Length; i++)
+        {
+            questions[i].text = Questions.questionsText[i];
+        }
     }
 
     private void Update()
     {
         for(int i = 0; i < questions.Length; i++)
         {
-            if(questions[i].activeInHierarchy)
+            if(questions[i].gameObject.activeInHierarchy)
             {
-                if(i >= 12 && i <= 23)
-                {
-                    For.SetActive(true);
-                    Against.SetActive(true);
-                }
-
-                else if(i >= 36)
+                if(i >= 12)
                 {
                     For.SetActive(true);
                     Against.SetActive(true);

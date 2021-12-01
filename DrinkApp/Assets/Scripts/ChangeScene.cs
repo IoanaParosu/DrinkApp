@@ -10,6 +10,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("SetPlayersScene");
     }
 
+    public static void ChooseTopicScene()
+    {
+        SceneManager.LoadScene("ChooseTopic");
+    }
+
     public static void PlayScene()
     {
         SceneManager.LoadScene("PlayScene");
