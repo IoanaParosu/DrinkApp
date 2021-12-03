@@ -14,10 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatar:
   - characterName: 
-    playerAvatar: {fileID: 21300000, guid: 9d4d7bccc9bffac46890b3d866842e81, type: 3}
+    playerAvatar: {fileID: 21300000, guid: 183bc09577a7827488c758df6a8b68bc, type: 3}
   - characterName: 
-    playerAvatar: {fileID: 21300000, guid: 64f3605affb0d2c4ca72ce717dc9adfa, type: 3}
-  - characterName: 
-    playerAvatar: {fileID: 21300000, guid: a5ba7fa63d5754840b5ca3cf5a7589df, type: 3}
-  - characterName: 
-    playerAvatar: {fileID: 21300000, guid: b7e1f8e6c8eca1743b72cda1311f9c2f, type: 3}
+    playerAvatar: {fileID: 21300000, guid: f30165ce11451ec4f96084eb42dbd866, type: 3}

@@ -66,20 +66,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 58349434450c6674bb60715d948e731b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.15
-  m_Text: "                                                                                 
-    TUTORIAL\n\r\nWelcome to Party Dispute, a debate game with your friends!\r\nThis
+  m_Text: "                                                                      
+    How to Play\n\r\nWelcome to Party Dispute, a debate game with your friends!\r\nThis
     is how you play:\r\n\r\n   1.     Select how many of your friends will be participating.\r\n  
     2.     Insert the names of each player and select an avatar that represents you.\r\n  
     3.     Finally before heading into the actual game choose which decks you want
@@ -92,7 +92,7 @@ MonoBehaviour:
     time is up, the other players vote on who displayed the better argument.\r\n  
     9.     Once you have decided on a winner, tap their name on the screen.\r\n  
     10.   After the winner is selected a new round will start with two new players.\r\n  
-    11.   Have fun and may the best debater win!\r\n"
+    11.   Have fun and may the best debater win!\r"
 --- !u!1 &4732310561140726717
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,14 +152,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9372549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 50f250af08b82534a81e5cb825c0e30f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
