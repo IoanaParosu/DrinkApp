@@ -2819,10 +2819,10 @@ RectTransform:
   m_Father: {fileID: 1249870545}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741969767
 MonoBehaviour:
@@ -4576,10 +4576,10 @@ RectTransform:
   m_Father: {fileID: 744450168}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 365, y: 192.4}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -35, y: -17.309998}
+  m_SizeDelta: {x: 30, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249870546
 MonoBehaviour:
@@ -4854,6 +4854,31 @@ MonoBehaviour:
   - Hentai porn? For or Against
   - "During sex would you rather\u2026  Spank or Be Spanked"
   TypeFourQuestions:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  TypeFiveQuestions:
   - 
   - 
   - 
