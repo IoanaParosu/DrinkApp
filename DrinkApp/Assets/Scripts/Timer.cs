@@ -101,8 +101,11 @@ public class Timer : MonoBehaviour
 
     public void SkipTimer()
     {
-        time = 0.1f;
-        AudioManager.instance.Stop("Clock");
+        if (!buttonTimer.interactable)
+        {
+            time = 0.1f;
+            AudioManager.instance.Stop("Clock");
+        }
     }
 
     public void PauseTimer()
