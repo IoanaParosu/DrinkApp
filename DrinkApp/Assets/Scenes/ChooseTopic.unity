@@ -2076,7 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeOneQuestions:
-  - Which is the better pet...  Cats or Dogs?
+  - Which is the better pet... Cats or Dogs?
   - "Which is the better beverage\u2026 Beer or Wine?"
   - "Would you rather be\u2026 Deaf or Blind?"
   - "Would you rather\u2026 Read a book or Watch a movie?"
@@ -2088,19 +2088,18 @@ MonoBehaviour:
   - "Which season is better\u2026 Summer or Winter?"
   - "Would you rather be a famous\u2026 Singer or Actor?"
   - "Spending your Friday evening\u2026 Staying at home or A night out? "
-  - Is the customer always right? For or Against
-  - Violence in movies and video games cause behavior problems? For or Against
-  - Is being a streamer a real job? For or Against
-  - Being immortal?  For or Against
-  - Are Ghosts real? For or Against
-  - The Beatles are overrated? For or Against
-  - Do Aliens exist? For or Against
-  - Is it important to put the toilet seat  back down after you are done? For or
-    Against
-  - Does pineapple belong on a pizza? For or Against
-  - Does age matter in a relationship? For or Against
-  - Is the climate change a hoax? For or Against
-  - Is lying always wrong? For or Against
+  - Is the customer always right?
+  - Violence in movies and video games cause behavior problems?
+  - Is being a streamer a real job?
+  - 'Being immortal? '
+  - Are Ghosts real?
+  - The Beatles are overrated?
+  - Do Aliens exist?
+  - Is it important to put the toilet seat back down after you are done?
+  - Does pineapple belong on a pizza?
+  - Does age matter in a relationship?
+  - Is the climate change a hoax?
+  - Is lying always wrong?
   TypeTwoQuestions:
   - "What came first\u2026 the Chicken or the Egg?"
   - "Would you rather have explosive\u2026 Diarrhea or Vomiting?"
@@ -2119,19 +2118,18 @@ MonoBehaviour:
   - "Would you rather be an\u2026 Unknown Superhero or  Infamous Villain?"
   - " Who would be a better friend\u2026 Frankenstein\u2019s Monster or  the Lochness
     Monster?"
-  - Is the earth actually flat? For or Against
-  - "Do you think that Santa\u2019s elves are compensated fairly for their work?
-    For or Against"
-  - Are hotdogs sandwiches?  For or Against
-  - Dating a vampire while on your period? For or Against
-  - Making out with a killer clown? For or Against
-  - Should farting be normalized? For or Against
-  - Summoning a demon just to have a friend?  For or Against
-  - Donald Duck should really put on some pants? For or Against
-  - Is water wet? For or Against
-  - Being able to hear and talk with fruits and vegetables? For or Against
-  - Toenails should replace money  as currency? For or Against
-  - Having a cloud as your pet? For or Against
+  - Is the earth actually flat?
+  - "Do you think that Santa\u2019s elves are compensated fairly for their work?"
+  - Are hotdogs sandwiches?
+  - Dating a vampire while on your period?
+  - Making out with a killer clown?
+  - Should farting be normalized?
+  - Summoning a demon just to have a friend?
+  - Donald Duck should really put on some pants?
+  - Is water wet?
+  - Being able to hear and talk with fruits and vegetables?
+  - Toenails should replace money as currency?
+  - Having a cloud as your pet?
   TypeThreeQuestions:
   - Would you rather... Walk in on your parents having sex or  Have them walk in
     on you?
@@ -2148,18 +2146,18 @@ MonoBehaviour:
   - "During sex would you rather\u2026  Spank or Be Spanked"
   - "Which sex is better\u2026  Vaginal or Anal?"
   - "During sex would you rather\u2026  Strangle or Be Strangled?"
-  - Does size matter?  For or Against
-  - Is a dildo better than a dick?  For or Against
-  - Be married to a pornstar?  For or Against
-  - Should watching porn  be normalized?  For or Against
-  - A social media where people  rate their sex partners?  For or Against
-  - Having sex with your co-workers?  For or Against
-  - Having sex during pregnancy?  For or Against
-  - BDSM?  For or Against
-  - Is 69 overrated?  For or Against
-  - "Having sex with your  best friend\u2019s ex?  For or Against"
-  - Sex on the beach?  For or Against
-  - Hentai porn? For or Against
+  - Does size matter?
+  - Is a dildo better than a dick?
+  - Be married to a pornstar?
+  - Should watching porn  be normalized?
+  - 'A social media where people rate their sex partners? '
+  - Having sex with your co-workers?
+  - Having sex during pregnancy?
+  - BDSM?
+  - Is 69 overrated?
+  - "Having sex with your  best friend\u2019s ex? "
+  - 'Sex on the beach? '
+  - Hentai porn?
   TypeFourQuestions:
   - "Which games do you prefer\u2026 Single Player or Multiplayer?"
   - "Which games do you prefer\u2026  AAA or Indie?"
@@ -2174,18 +2172,18 @@ MonoBehaviour:
   - "Who is the more iconic  game villain\u2026  Ganondorf or Bowser?"
   - "If Pok\xE9mons existed in real life,  would your starter be\u2026  Charmander
     or Squirtle?"
-  - Console exclusives?  For or Against
-  - Does playing mobile games  make you a real gamer?  For or Against
-  - Should loot boxes in games  be considered as gambling? For or Against
-  - Is E-Sport a real sport?  For or Against
-  - Is Princess Peach suffering from  Stockholm Syndrome?  For or Against
-  - Releasing remastered games?  For or Against
-  - Is Free-to-Play games with  microtransactions the future?  For or Against
-  - Do violent video games  cause behavior problems?  For or Against
-  - Quick time events in games?  For or Against
-  - Are zombie shooter games  overused? For or Against
-  - Should games be considered  as art?  For or Against
-  - The Last of Us 2 is a masterpiece?  For or Against
+  - Console exclusives?
+  - Does playing mobile games make you a real gamer?
+  - Should loot boxes in games be considered as gambling?
+  - Is E-Sport a real sport?
+  - Is Princess Peach suffering from Stockholm Syndrome?
+  - Releasing remastered games?
+  - Is Free-to-Play games with microtransactions the future?
+  - Do violent video games  cause behavior problems?
+  - Quick time events in games?
+  - Are zombie shooter games overused?
+  - Should games be considered as art?
+  - The Last of Us 2 is a masterpiece?
   TypeFiveQuestions:
   - "Which is the better sitcom\u2026 Seinfeld or Friends?"
   - "Which is the better fantasy franchise\u2026 Harry Potter or Lord of the Rings?"
@@ -2199,19 +2197,18 @@ MonoBehaviour:
   - "Which is the better spy franchise\u2026 James Bond or Mission Impossible?"
   - "When watching a horror movie do you prefer\u2026 Demonic possessions or Slashers?"
   - "Which is the better animated series\u2026 The Simpson or Family Guy?"
-  - Were Ross & Rachel from Friends on a break? For or Against
-  - The Twilight movies are underrated? For or Against
-  - Does 3D enhance the movie experience? For or Against
-  - Did the top stop spinning and fall at the end of Inception? For or Against
-  - Are The Dark Knight trilogy the best superhero movies ever made? For or Against
-  - Did the final season of Game Of Thrones ruin the entire series? For or Against
-  - In Titanic could Jack have fit on the door with Rose? For or Against
-  - 'Are animated movies/series just for kids? For or Against '
-  - Is Love Actually the best Christmas movie ever made? For or Against
-  - Is Die Hard a Christmas Movie? For or Against
-  - In the Lord of the Rings they could just have flown the ring to Mordor? For or
-    Against
-  - Are classic movies overrated? For or Against
+  - Were Ross & Rachel from Friends on a break?
+  - The Twilight movies are underrated?
+  - Does 3D enhance the movie experience?
+  - Did the top stop spinning and fall at the end of Inception?
+  - Are The Dark Knight trilogy the best superhero movies ever made?
+  - Did the final season of Game Of Thrones ruin the entire series?
+  - In Titanic could Jack have fit on the door with Rose?
+  - Are animated movies/series just for kids?
+  - Is Love Actually the best Christmas movie ever made?
+  - Is Die Hard a Christmas Movie?
+  - In the Lord of the Rings they could just have flown the ring to Mordor?
+  - Are classic movies overrated?
 --- !u!114 &1870513708
 MonoBehaviour:
   m_ObjectHideFlags: 0
