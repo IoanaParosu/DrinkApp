@@ -14,6 +14,9 @@ public class NumberOfPlayers : MonoBehaviour
     {
 
     };
+
+    public GameObject backGround;
+
     public static int ChosenNumberOfPlayers;
     void Start()
     {
@@ -35,6 +38,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void ThreePlayers()
@@ -46,6 +50,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void FourPlayers()
@@ -57,6 +62,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void FivePlayers()
@@ -68,6 +74,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void SixPlayers()
@@ -79,6 +86,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void SevenPlayers()
@@ -90,6 +98,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void EightPlayers()
@@ -101,6 +110,7 @@ public class NumberOfPlayers : MonoBehaviour
         {
             InputFields[i].SetActive(true);
         }
+        backGround.SetActive(true);
     }
 
     public void ArrangeGameObjects()
